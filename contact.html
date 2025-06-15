@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>צור קשר</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen">
+
+<header class="bg-black shadow-md sticky top-0 z-10">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold text-yellow-400">האתר שלי</h1>
+    <nav class="space-x-4 space-x-reverse text-sm md:text-base text-white">
+      <a href="index.chatbot14-04-25-my-site-.html" class="hover:text-yellow-300 transition">בית</a>
+      <a href="about.14-04-25-my-site-1.html" class="hover:text-yellow-300 transition">אודות</a>
+      <a href="projects.html" class="hover:text-yellow-300 transition">פרויקטים</a>
+      <a href="contact.html" class="hover:text-yellow-300 transition">צור קשר</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container mx-auto p-10 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-500">צור קשר</h2>
+  <p class="mb-6 text-gray-600 text-lg">נשמח לשמוע ממך! מלא את הפרטים בטופס ונחזור אליך בהקדם.</p>
+
+  <!-- כפתור לפתיחת הטופס -->
+  <button id="lead-form-button" class="bg-yellow-400 text-black px-6 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition mb-4">
+    📋 השאר פרטים
+  </button>
+
+  <!-- חלון הטופס -->
+  <div id="lead-form-container" class="w-full max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6 hidden transition">
+    <!-- כאן נטמיע את ה-iframe -->
+    <iframe src="https://live-public.origamicloud.ms/s/webform/mycrm180525/684b8cab71812"
+            width="100%" height="600" frameborder="0" scrolling="auto" class="rounded"></iframe>
+
+    <button id="close-form" class="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">סגור</button>
+  </div>
+</main>
+
+<script>
+  const leadFormButton = document.getElementById('lead-form-button');
+  const leadFormContainer = document.getElementById('lead-form-container');
+  const closeFormButton = document.getElementById('close-form');
+
+  leadFormButton.addEventListener('click', () => {
+    leadFormContainer.classList.remove('hidden');
+  });
+
+  closeFormButton.addEventListener('click', () => {
+    leadFormContainer.classList.add('hidden');
+  });
+</script>
+<script
+  src='https://cdn.jotfor.ms/agent/embedjs/019732599424766291c12d20a0e56dcc8016/embed.js?skipWelcome=1&maximizable=1'>
+</script>
+</body>
+</html>
