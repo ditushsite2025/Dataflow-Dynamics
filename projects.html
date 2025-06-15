@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>הפרויקטים שלי</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen">
+
+<header class="bg-black shadow-md sticky top-0 z-10">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold text-yellow-400">האתר שלי</h1>
+    <nav class="space-x-4 space-x-reverse text-sm md:text-base text-white">
+      <a href="index.chatbot14-04-25-my-site-.html" class="hover:text-yellow-300 transition">בית</a>
+      <a href="about.14-04-25-my-site-1.html" class="hover:text-yellow-300 transition">אודות</a>
+      <a href="projects.html" class="hover:text-yellow-300 transition">פרויקטים</a>
+      <a href="contact.html" class="hover:text-yellow-300 transition">צור קשר</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container mx-auto p-10">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-500 text-center">הפרויקטים שלי</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white rounded-lg p-6 shadow-md project-card">
+      <h3 class="text-xl font-semibold mb-2 text-gray-900">בוט אוטומציה</h3>
+      <p class="text-gray-600">פרויקט אוטומציה חכם שמחבר בין מערכות כמו Gmail, Sheets ו-OpenAI לביצוע תהליכים אוטומטיים.</p>
+    </div>
+    <div class="bg-white rounded-lg p-6 shadow-md project-card">
+      <h3 class="text-xl font-semibold mb-2 text-gray-900">אתר אישי</h3>
+      <p class="text-gray-600">בניית אתר אישי עם עיצוב מותאם אישית, תפריטים דינמיים וצ'אטבוט שמופיע בכל עמוד.</p>
+    </div>
+    <div class="bg-white rounded-lg p-6 shadow-md project-card">
+      <h3 class="text-xl font-semibold mb-2 text-gray-900">מערכת CRM</h3>
+      <p class="text-gray-600">פיתוח מערכת CRM מותאמת אישית לניהול לידים, משימות, מסמכים ושליחות.</p>
+    </div>
+    <div class="bg-white rounded-lg p-6 shadow-md project-card">
+      <h3 class="text-xl font-semibold mb-2 text-gray-900">ניהול פרויקטים באוריגמי</h3>
+      <p class="text-gray-600">מערכת מתקדמת לניהול פרויקטים עם אבני דרך, תמחור, חישוב שעות ודוחות מתקדמים.</p>
+    </div>
+  </div>
+</main>
+
+<!-- כפתור הצ'אט -->
+<button id="chat-button" class="fixed bottom-8 left-8 bg-yellow-400 text-black w-14 h-14 rounded-full text-2xl shadow-lg hover:bg-yellow-500 transition">💬</button>
+
+<!-- חלונית הצ'אט -->
+<div id="chat-container" class="hidden fixed bottom-28 left-8 w-80 h-96 bg-white rounded-lg shadow-lg flex flex-col z-50">
+  <div id="messages" class="flex-1 overflow-y-auto p-4 border-b border-gray-300"></div>
+  <div id="user-input" class="flex p-4">
+    <input type="text" id="inputText" placeholder="כתוב כאן..." class="flex-1 border border-gray-300 p-2 rounded mr-2" />
+    <button id="sendButton" class="bg-yellow-400 px-4 py-2 rounded hover:bg-yellow-500">שלח</button>
+  </div>
+</div>
+
+<script type="module" src="chatbot.js"></script>
+
+<script>
+  const chatButton = document.getElementById("chat-button");
+  const chatContainer = document.getElementById("chat-container");
+
+  chatButton.addEventListener("click", () => {
+    chatContainer.classList.toggle("hidden");
+  });
+</script>
+<script
+  src='https://cdn.jotfor.ms/agent/embedjs/019732599424766291c12d20a0e56dcc8016/embed.js?skipWelcome=1&maximizable=1'>
+</script>
+</body>
+</html>
